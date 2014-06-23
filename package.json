@@ -11,6 +11,6 @@
     "wget": "latest",
     "logfmt": "^1.1.2",
     "collections": "latest",
-    "ejs" : "~0.8.5"
+    "ejs": "~0.8.5"
   }
 }
