@@ -10,7 +10,7 @@ console.log('Magic happens on port 8081');
 exports = module.exports = app;
 
 //Define path of file
-path = 'app/test.js';
+path = 'samplecode/samplecode.js';
 //Find function names
 keywords = tokenize.findFunctions(path);
 //If too long for search, shorten
