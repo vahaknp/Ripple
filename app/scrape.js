@@ -4,6 +4,7 @@ var wget = require('wget');
 var fs = require('fs');
 
 urls = [];
+module.exports.urls = urls;
 
 findURLs = function(keywords, iter) {
     //Create URL based on keywords 
