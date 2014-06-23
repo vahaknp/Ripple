@@ -12,7 +12,8 @@ exports = module.exports = app;
 //Define path of file
 path = 'samplecode/samplecode.js';
 //Find function names
-keywords = tokenize.findFunctions(path);
+//keywords = tokenize.findFunctions(path);
+keywords = ['on_load', 'on_load2']
 //If too long for search, shorten
 var too_long = true;
 while (too_long){

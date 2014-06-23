@@ -8,6 +8,7 @@
 		"esprima": "~1.2.2",
 		"github-api": "~0.7.0",
 		"request"    : "latest",
-    	"cheerio"    : "latest"
+    	"cheerio"    : "latest",
+    	"wget"       : "latest"
 	}
 }
