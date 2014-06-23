@@ -3,7 +3,7 @@ var cheerio = require('cheerio');
 var wget = require('wget');
 var fs = require('fs');
 
-findURLs = function(keywords) {
+findURLs = function(keywords, iter) {
     //Create URL based on keywords
     var urls = []; 
     url = 'https://github.com/search?q=';
@@ -11,7 +11,7 @@ findURLs = function(keywords) {
     for (var index in keywords){
         url = url+keywords[index];
         if (index != length-1){
-            url = url+'+';
+            url = url+'+OR+';
         }
     }
     url = url + '&ref=advsearch&type=Code&l=JavaScript';
@@ -31,7 +31,7 @@ findURLs = function(keywords) {
             var temp = urls[index].replace('/blob', '');
             temp = 'https://raw.githubusercontent.com' + temp
             var src = temp;
-            var output = 'tmp/code'+index+'.js';
+            var output = 'tmp/code'+iter+index+'.js';
             var options = {
                 port: 8081
             };
