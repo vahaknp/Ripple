@@ -3,8 +3,7 @@ var cheerio = require('cheerio');
 var wget = require('wget');
 var fs = require('fs');
 
-urls = [];
-module.exports.urls = urls;
+GLOBAL.urls = [];
 
 findURLs = function(keywords, iter) {
     //Create URL based on keywords 
@@ -29,6 +28,7 @@ findURLs = function(keywords, iter) {
                     urls[i] = $(this).find('.title').children().first().next().attr('href')
                 });
             });
+            //Find Number
             $('.counter').filter(function(){
                 number = $(this).text();
                 console.log('NUMBER:', number);
@@ -54,7 +54,6 @@ findURLs = function(keywords, iter) {
             });
         }
     });
-    console.log('URLS', urls)
 };
 
 module.exports.findURLs = findURLs;

@@ -39,4 +39,3 @@ app.get('/check', function(req, res) {
 	};
 });
 
-
