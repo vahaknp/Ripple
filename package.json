@@ -1,5 +1,5 @@
 {
-  "name": "node-github",
+  "name": "RippleTest",
   "main": "server.js",
   "dependencies": {
     "express": "^4.4.4",
@@ -12,5 +12,19 @@
     "logfmt": "^1.1.2",
     "collections": "latest",
     "ejs": "~0.8.5"
-  }
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vahaknp/Ripple.git"
+  },
+  "author": "vahaknp",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vahaknp/Ripple/issues"
+  },
+  "homepage": "https://github.com/vahaknp/Ripple"
 }
