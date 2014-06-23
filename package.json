@@ -3,13 +3,14 @@
   "main": "server.js",
   "dependencies": {
     "express": "^4.4.4",
-    "mongoose": "~3.6.13",
     "body-parser": "~1.0.1",
     "esprima": "~1.2.2",
     "github-api": "~0.7.0",
     "request": "latest",
     "cheerio": "latest",
     "wget": "latest",
-    "logfmt": "^1.1.2"
+    "logfmt": "^1.1.2",
+    "collections": "latest",
+    "ejs" : "~0.8.5"
   }
 }

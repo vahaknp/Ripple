@@ -3,10 +3,10 @@ var cheerio = require('cheerio');
 var wget = require('wget');
 var fs = require('fs');
 
-findURLs = function(keywords) {
-    var urls = [];
-    keywords = ['fafgadg']
-    //Create URL based on keywords
+urls = [];
+
+findURLs = function(keywords, iter) {
+    //Create URL based on keywords 
     url = 'https://github.com/search?q=';
     var length = keywords.length;
     for (var index in keywords){
@@ -53,6 +53,7 @@ findURLs = function(keywords) {
             });
         }
     });
+    console.log('URLS', urls)
 };
 
 module.exports.findURLs = findURLs;
