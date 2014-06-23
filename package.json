@@ -1,0 +1,13 @@
+{
+	"name": "node-github",
+	"main": "server.js",
+	"dependencies": {
+		"express": "~4.0.0",
+		"mongoose": "~3.6.13",
+		"body-parser": "~1.0.1",
+		"esprima": "~1.2.2",
+		"github-api": "~0.7.0",
+		"request"    : "latest",
+    	"cheerio"    : "latest"
+	}
+}
