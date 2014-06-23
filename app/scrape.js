@@ -3,9 +3,10 @@ var cheerio = require('cheerio');
 var wget = require('wget');
 var fs = require('fs');
 
-findURLs = function(keywords, iter) {
+findURLs = function(keywords) {
+    var urls = [];
+    keywords = ['fafgadg']
     //Create URL based on keywords
-    var urls = []; 
     url = 'https://github.com/search?q=';
     var length = keywords.length;
     for (var index in keywords){
@@ -18,6 +19,8 @@ findURLs = function(keywords, iter) {
 
     //Scrape URL
     request(url, function(error, response, html){
+        
+        //Grab URLs and number
         if(!error){
             var $ = cheerio.load(html);   
             $('.code-list').filter(function(){
@@ -25,7 +28,13 @@ findURLs = function(keywords, iter) {
                     urls[i] = $(this).find('.title').children().first().next().attr('href')
                 });
             });
+            $('.counter').filter(function(){
+                number = $(this).text();
+                console.log('NUMBER:', number);
+            })
         }
+
+        //Download
         for (var index in urls){
             console.log(urls[index]);
             var temp = urls[index].replace('/blob', '');

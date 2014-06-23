@@ -16,21 +16,7 @@ path = 'samplecode/samplecode.js';
 keywords = tokenize.findFunctions(path);
 
 //Scrape Github for names of repos
-var remaining = true;
-iter = 0;
-while (remaining){
-	if (keywords.length < 5){
-		scrape.findURLs(keywords, iter)
-		console.log(keywords);
-		remaining = false;
-	}
-	else{
-		temp = keywords.splice(0,5);
-		console.log(temp);
-		scrape.findURLs(temp, iter);
-	}
-	iter += 1;
-};
+scrape.findURLs(keywords);
 
 
 
