@@ -1,4 +1,0 @@
-weather = 80
-if (weather == 80){
-	beach = true
-}
